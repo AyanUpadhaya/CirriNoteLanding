@@ -16,7 +16,7 @@ export default function Features() {
         <div className="mb-[80px]">
           <div className="mb-[17px]">
             <button className="w-[132px] py-[5px] px-[11] h-auto rounded-full bg-[#00BB77]">
-              <span className="text-sm font-manrope font-medium">
+              <span className="text-sm font-manrope font-medium tracking-[-0.93px] leading-[19.6px]">
                 Whats the best
               </span>
             </button>
