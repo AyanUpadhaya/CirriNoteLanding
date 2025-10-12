@@ -19,13 +19,17 @@ export default function Hero() {
 
         {/* Center Image - Fades in after text */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 100 }} // start slightly below view
+          animate={{ opacity: 1, y: 0 }} // move up to normal position
+          transition={{
+            duration: 0.8,
+            delay: 0.9,
+            ease: [0.22, 1, 0.36, 1], // smooth cubic easing (like "easeOutBack")
+          }}
           className="flex justify-center"
         >
           <div className="relative">
-            <img src={octupas} alt="Hero" className="relative " />
+            <img src={octupas} alt="Hero" className="relative" />
           </div>
         </motion.div>
 

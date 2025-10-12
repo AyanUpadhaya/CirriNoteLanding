@@ -1,10 +1,21 @@
+import { ArrowUpRight } from "lucide-react";
+
 function Featured() {
   return (
-    <div className="bg-cold_gray hover:bg-transparent hover:border-2 hover:border-[#00BB77] transitio duration-200 ease-in-out p-10 h-[320px] rounded-2xl flex flex-col justify-between">
-      <div></div>
-      <h3 className="text-white font-manrope text-[32px] leading-[38px] tracking-[-0.64px]">
-        Feature Name
-      </h3>
+    <div className="group relative bg-cold_gray hover:bg-transparent hover:border-2 hover:border-[#00BB77] transition-all duration-500  p-10 h-[320px] rounded-2xl flex flex-col justify-between">
+      {/* Arrow */}
+      {/* Arrow with scale effect */}
+      <ArrowUpRight
+        size={87}
+        className="absolute top-8 right-7 text-featureCardHoverBorder opacity-0 transform translate-x-[-40px] translate-y-[40px] scale-50 transition-all duration-500 ease-[cubic-bezier(0.77,0,0.175,1)] group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100"
+      />
+
+      {/* Text */}
+      <div className="absolute bottom-10 left-10">
+        <p className="text-white font-manrope text-[32px] leading-[38px] tracking-[-0.64px]">
+          Feature Name
+        </p>
+      </div>
     </div>
   );
 }

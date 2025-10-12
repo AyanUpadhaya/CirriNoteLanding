@@ -15,6 +15,7 @@ export default {
         footerText: "#848484",
         // featureCardHover: "#1C1C1C",
         featureCardHoverBorder: "#00BB77",
+        textGreen: "#00BB77",
       },
 
       backgroundImage: {
