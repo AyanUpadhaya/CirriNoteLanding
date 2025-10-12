@@ -43,7 +43,7 @@ export default function Features() {
           <div className=" p-10 h-[320px] rounded-2xl"></div>
         </div>
 
-        <div className="grid grid-cols-3 gap-3  mb-[17px]r">
+        <div className="grid grid-cols-3 gap-3">
           <div className="col-span-2 flex flex-col justify-center">
             <h3 className="text-primary font-manrope text-[48px] leading-[52px] tracking-[-1.44px]">
               Creative people worldwide rely <br /> on this app to craft ideas{" "}
