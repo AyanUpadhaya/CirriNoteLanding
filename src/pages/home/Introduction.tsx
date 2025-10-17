@@ -1,9 +1,14 @@
 import { motion } from "framer-motion";
 import { note } from "@/assets/getAssets";
+import { useScrollContext } from "@/contexts/ScrollContext";
 
 export default function Introduction() {
+  const { setIsAbout, isAbout } = useScrollContext();
   return (
-    <section className="bg-dark_soft_gray bg-fixed p-10 py-[229px] mb-[128px] h-screen flex justify-center items-center sticky top-0 overflow-hidden">
+    <section
+      id="about"
+      className={`bg-dark_soft_gray bg-fixed p-10 py-[229px] mb-[128px] h-screen flex justify-center items-center  sticky top-0 overflow-hidden`}
+    >
       <div className="space-y-[60px] flex flex-col items-center text-center">
         {/* Top Text */}
         <motion.h2

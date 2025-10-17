@@ -3,7 +3,7 @@ import { insta, linkedin, logo, twitter } from "@/assets/getAssets";
 
 export default function Footer() {
   return (
-    <div className="px-10 bg-dark_gray py-[80px]">
+    <div id="contact" className="px-10 bg-dark_gray py-[80px]">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-[64px]">
         {/* row 1 */}
         <div className="flex justify-between items-center gap-[80px]">

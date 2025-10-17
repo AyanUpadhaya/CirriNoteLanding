@@ -22,7 +22,10 @@ function Featured() {
 
 export default function Features() {
   return (
-    <section className="pt-[180px] pb-[273px] sticky top-0 bg-dark px-10  z-50">
+    <section
+      id="features"
+      className="pt-[180px] pb-[273px] sticky top-0 bg-dark px-10  z-50"
+    >
       <div className="max-w-[1200px] mx-auto">
         <div className="mb-[80px]">
           <div className="mb-[17px]">
@@ -64,7 +67,7 @@ export default function Features() {
           <Featured></Featured>
         </div>
 
-        <div className="grid grid-cols-3 gap-[17px] ">
+        <div id="faqs" className="grid grid-cols-3 gap-[17px] ">
           <Featured></Featured>
           <Featured></Featured>
           <div className=" p-10 h-[320px] rounded-2xl"></div>

@@ -1,30 +1,56 @@
 import { cart, logo } from "@/assets/getAssets";
+// import { useScrollContext } from "@/contexts/ScrollContext";
 import { useOutletContext } from "react-router-dom";
 
 export default function Navbar() {
   const { hideTopNav } = useOutletContext<{ hideTopNav: boolean }>();
+  // const { setIsAbout } = useScrollContext();
   const menus = [
     {
       id: 1,
       title: "About",
-      path: "#about",
+      path: "about",
     },
     {
       id: 2,
       title: "Features",
-      path: "#features",
+      path: "features",
     },
     {
       id: 3,
       title: "FAQs",
-      path: "#faqs",
+      path: "faqs",
     },
     {
       id: 4,
       title: "Contact",
-      path: "#contact",
+      path: "contact",
     },
   ];
+
+  const handleScroll = (
+    e:
+      | React.MouseEvent<HTMLAnchorElement>
+      | React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    targetId?: string
+  ) => {
+    e.preventDefault();
+
+    if (!targetId || targetId === "#") {
+      // Scroll to top if no id provided
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const section = document.getElementById(targetId);
+    // setIsAbout(targetId === "about");
+    if (section) {
+      const yOffset = -10; // adjust based on header height
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
 
   return (
     <div
@@ -42,7 +68,8 @@ export default function Navbar() {
             <li key={item.id}>
               <a
                 className="font-manrope font-medium text-sm text-white leading-[19.6px] tracking-[-0.28px] no-underline"
-                href={item?.path}
+                href={`#${item?.path}`}
+                onClick={(e) => handleScroll(e, item?.path)}
               >
                 {item?.title}
               </a>

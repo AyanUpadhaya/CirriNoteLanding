@@ -1,0 +1,4 @@
+html {
+  scroll-padding-top: 80px; /* Height of your sticky header */
+  scroll-behavior: smooth;
+}
